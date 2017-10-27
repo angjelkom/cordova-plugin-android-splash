@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-android-splash",
+  "version": "1.0.0",
+  "description": "Cordova Android Splash Plugin",
+  "cordova": {
+    "id": "cordova-plugin-android-splash",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/echonox/cordova-plugin-android-splash"
+  },
+  "keywords": [
+    "cordova",
+    "android",
+    "splash",
+    "splashscreen",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=4.0.0-dev"
+    }
+  ],
+  "author": "Apache Software Foundation",
+  "license": "Apache 2.0"
+}

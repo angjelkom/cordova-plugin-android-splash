@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="cordova-plugin-android-splash"
+        version="1.0.0">
+    <name>Android Splashscreen</name>
+    <description>A better and faster alternative splashscreen plugin for Android</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,splash,splashscreen,splash screen,android</keywords>
+
+    <js-module src="www/Splash.js" name="Splash">
+        <clobbers target="cordova.plugins.splash" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+      <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Splash">
+                <param name="android-package" value="com.echonox.Splash"/>
+            </feature>
+      </config-file>
+
+      <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='MainActivity']" mode="merge">
+            <activity android:name="MainActivity" android:theme="@style/AppTheme" />
+        </edit-config>
+
+        <source-file src="src/com/echonox/Splash.java" target-dir="src/com/echonox" />
+
+        <source-file src="res/drawable/splash.xml" target-dir="res/drawable" />
+        <source-file src="res/values/styles.xml" target-dir="res/values" />
+    </platform>
+</plugin>
